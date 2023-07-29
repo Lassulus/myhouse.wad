@@ -30,13 +30,13 @@
               set -efu
 
               gum style --border normal --margin "1" --padding "1 2" --border-foreground 212 "
-                This is an automated runner for my$(gum style --foreground 212 house).wad.
+                This is an automated runner for my$(gum style --foreground 4 house).wad.
                 I suggest starting by hitting play and try it out.
                 If you get stuck, checkout the other links. Have fun!
               "
 
               menu() {
-                CHOICE=$(gum choose play journal googledrive 'doomworld thread')
+                CHOICE=$(gum choose play journal googledrive 'doomworld thread' "")
 
                 case "$CHOICE" in
                   play)
@@ -52,6 +52,14 @@
                   ;;
                   doomworld*)
                     gum style ' https://www.doomworld.com/forum/topic/134292-myhousewad/ '
+                    read -rp 'press any key to continue'
+                  ;;
+                  "")
+                    gum style 'SPOILER TERRITORY, I HIGHLY SUGGEST CLICKING THESE ONLY AFTER FINDING THE SECRET ON THE MAP'
+                    gum style --border normal --foreground 0 --background 0 "
+                      doomwiki walkthrough: https://doomwiki.org/wiki/My_House
+                      PowerPak excellent youtube video: https://www.youtube.com/watch?v=5wAo54DHDY0
+                    "
                     read -rp 'press any key to continue'
                   ;;
                 esac
