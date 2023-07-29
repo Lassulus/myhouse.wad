@@ -6,6 +6,5 @@
   };
 
 in writeShellScriptBin "myhouse" ''
-  set -x
   ${gzdoom}/bin/gzdoom -file ${./myhouse.pk3} -iwad ${doomIIwad}
 ''
