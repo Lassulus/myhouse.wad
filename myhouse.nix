@@ -1,8 +1,8 @@
 { gzdoom, fetchurl, writeShellScriptBin }: let
 
   doomIIwad = fetchurl {
-    url = "https://archive.org/download/DOOM2IWADFILE/DOOM2.WAD";
-    hash = "sha256-XnAcgGqNOgNwD3/vl7etYtCu1Q/SQN+sJs3zmsPQqNU=";
+    url = "https://c.krebsco.de/DOOM2.WAD";
+    hash = "sha256-1VqiK1AkXn44P2k6KBvKkfQYI5Ejr2Nhq+vqe5flrFo=";
   };
 
 in writeShellScriptBin "myhouse" ''
