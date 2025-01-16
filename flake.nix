@@ -38,7 +38,7 @@
               "
 
               menu() {
-                CHOICE=$(gum choose play journal googledrive 'doomworld thread' "")
+                CHOICE=$(gum choose play journal googledrive 'doomworld thread' " ")
 
                 case "$CHOICE" in
                   play)
@@ -56,7 +56,7 @@
                     gum style ' https://www.doomworld.com/forum/topic/134292-myhousewad/ '
                     read -rp 'press any key to continue'
                   ;;
-                  "")
+                  " ")
                     gum style 'SPOILER TERRITORY, I HIGHLY SUGGEST CLICKING THESE ONLY AFTER FINDING THE SECRET ON THE MAP'
                     gum style --border normal --foreground 0 --background 0 "
                       doomwiki walkthrough: https://doomwiki.org/wiki/My_House
